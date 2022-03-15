@@ -1,0 +1,27 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: istio-install
+  namespace: argocd
+spec:
+  destination:
+    namespace: default
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    path: common/istio-1-9/istio-install/base
+    repoURL: https://github.com/bahram-ebot7/kubeflow-manifests.git
+    targetRevision: v1.3-branch
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+    - PruneLast=true
+  ignoreDifferences:
+  - kind: MutatingWebhookConfiguration
+    jqPathExpressions:
+    - '.webhooks[]?.clientConfig.caBundle'
+  - kind: ValidatingWebhookConfiguration
+    jqPathExpressions:
+    - '.webhooks[]?.clientConfig.caBundle'
