@@ -1,0 +1,9 @@
+apiVersion: kubeflow.org/v1beta1
+kind: Profile
+metadata:
+    name: bahram
+    namespace: kubeflow
+spec:
+    owner:
+        kind: User
+        name: bahram.bahrambeigy@e-bot7.com
