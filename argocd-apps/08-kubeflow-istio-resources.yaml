@@ -18,7 +18,9 @@ spec:
       selfHeal: true
     syncOptions:
     - PruneLast=true
+    - RespectIgnoreDifferences=true
   ignoreDifferences:
   - kind: ClusterRole
+    group: rbac.authorization.k8s.io
     jsonPointers:
     - /rules

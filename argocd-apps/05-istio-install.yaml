@@ -18,10 +18,17 @@ spec:
       selfHeal: true
     syncOptions:
     - PruneLast=true
+    - RespectIgnoreDifferences=true
   ignoreDifferences:
   - kind: MutatingWebhookConfiguration
+    group: admissionregistration.k8s.io
     jqPathExpressions:
     - '.webhooks[]?.clientConfig.caBundle'
   - kind: ValidatingWebhookConfiguration
+    group: admissionregistration.k8s.io
     jqPathExpressions:
     - '.webhooks[]?.clientConfig.caBundle'
+  - kind: ValidatingWebhookConfiguration
+    group: admissionregistration.k8s.io
+    jqPathExpressions:
+    - '.webhooks[]?.failurePolicy'
