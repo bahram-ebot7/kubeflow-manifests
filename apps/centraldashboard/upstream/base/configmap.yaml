@@ -12,12 +12,6 @@ data:
           "link": "/pipeline/#/pipelines",
           "text": "Pipelines",
           "icon": "kubeflow:pipeline-centered"
-        },
-        {
-          "type": "item",
-          "link": "/pipeline/#/runs",
-          "text": "Runs",
-          "icon": "maps:directions-run"
         }
       ],
       "externalLinks": [ ],
