@@ -5,7 +5,7 @@ resources:
 - cluster-role.yaml
 - cluster-role-binding.yaml
 - deployment.yaml
-- service-account.yaml
+#- service-account.yaml
 commonLabels:
   app: aws-alb-ingress-controller
   kustomize.component: aws-alb-ingress-controller

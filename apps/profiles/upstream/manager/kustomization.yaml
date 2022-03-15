@@ -1,6 +1,6 @@
 resources:
 - manager.yaml
-- service-account.yaml
+#- service-account.yaml
 
 configMapGenerator:
 - name: config
