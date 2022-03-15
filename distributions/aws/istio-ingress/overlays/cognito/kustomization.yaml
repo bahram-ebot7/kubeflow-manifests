@@ -37,6 +37,14 @@ vars:
     apiVersion: v1
   fieldref:
     fieldpath: data.certArn
+- name: albName
+  objref:
+    kind: ConfigMap
+    name: istio-ingress-cognito-parameters
+    apiVersion: v1
+  fieldref:
+    fieldpath: data.albName
+
 namespace: istio-system
 configurations:
 - params.yaml
